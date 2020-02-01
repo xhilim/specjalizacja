@@ -11,5 +11,14 @@ void rezerwuj(int tab[30][6]); //rezerwuje miejsca porzez nadanie im wartoœci 1 
 void odwolanie(int tab[30][6]);//odwo³anie rezerwacji przez nadanie im wartosci 0 i nie pozwala odwolacwolnego miejsca
 
 
+void sprawdzanie(int tab[30][6]);//sprawdza czy miejsce jest zajete tylko, ¿e tym razem tylko pokazuje czy jest wolne czy nie
+
+void wyswietlanie(int tab[30][6]); // sprawdza czy miejsce jest zajete i pokazuje je
+
+void zajeteiwolne(int tab[30][6]);// pokazuje liczbe miejsc wolnych i zajetych
+
+void obliczanieceny(int tab[30][6]);//oblicza zysk
+
+
 
 #endif//H_FUNCTIONS

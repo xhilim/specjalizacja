@@ -1,14 +1,12 @@
 #include <iostream>
 #include "Functions.h"
-#include <fstream> // narazie nie wiem po co
-#include <string> // to te¿
 using namespace std;
-fstream kontrola; // tego tez			
+
 
 int main()
 {					
 	int siedzenia[30][6];
-	int cena = 100;
+	int cena = 0; ///cena bez podwyzek to 100
 	
 	menu();
 	generuj(siedzenia);
@@ -17,7 +15,7 @@ int main()
 	char znak; // tu zapiszemy wciœniêty klawisz
 	znak = getchar(); // program pobiera znak
 
-	while (znak != '7') //jeœli nie wybraliœmy 7, czyli nie chcemy koñczyæ to:
+	while (znak != '6') //jeœli nie wybraliœmy 7, czyli nie chcemy koñczyæ to:
 	{
 		switch (znak) //menu tylko ze juz po znaku
 		{
@@ -31,15 +29,16 @@ int main()
 			break;
 		case '3':
 			cout << "Sprawdz miejsce" << endl;
+			sprawdzanie(siedzenia);
 			break;
-		case '4':
-			cout << "Wyswietl wszystkie miejsca" << endl;
+			case '4':
+			cout << "Wyswietl zarezerwowane miejsca" << endl;
+			wyswietlanie(siedzenia);
 			break;
 		case '5':
-			cout << "Wyswietl wolne miejsca" << endl;
-			break;	
-		case '6':
-			cout << "Wyswietl zarezerwowane miejsca" << endl;
+			cout << "zobacz statystyki" << endl;
+			zajeteiwolne(siedzenia);
+			obliczanieceny(siedzenia);
 			break;
 		}
 
